@@ -3,7 +3,7 @@
 You've used a database. You've written data, updated data, and read data.
 You've manipulated data and sent it off to glorious APIs.
 
-### Let's focus here on the formatting (or lack thereof) of stored data.
+*Let's focus here on the formatting (or lack thereof) of stored data.*
 
 Once in a while, you'll come accross the need to use data that has,
 unfortunately, been pre-formatted for one reason or another. That's
