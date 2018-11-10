@@ -3,7 +3,7 @@
 You've used a database. You've written data, updated data, and read data.
 You've manipulated data and sent it off to glorious APIs.
 
-#### Let's focus here on the formatting (or lack thereof) of stored data.
+### Let's focus here on the formatting (or lack thereof) of stored data.
 
 Once in a while, you'll come accross the need to use data that has,
 unfortunately, been pre-formatted for one reason or another. That's
@@ -25,14 +25,14 @@ with your password and a colon (`:`) in between them. For example, if your
 username is `john` and your password is `password`, then the value of the
 header would be: `Basic am9objpwYXNzd29yZA==`.
 
-#### Now what?
+### Now what?
 
 Since that is essentially what we use to authenticate, a few developers will be
 tempted to store that exact string as the "password" (wherever it is to be
 stored), so that upon retrieval it is ready to just plop directly into the HTTP
 header when communicating with the REST-ful API. Done.
 
-#### But what about the FTP integration?
+### But what about the FTP integration?
 
 That needs to authenticate as well.
 
@@ -66,7 +66,7 @@ What someone with little or no context would _expect_ to see is one field for
 password (the raw password) and a separate field for username (raw username).
 Such a setup leaves _very_ little room for error, and that's a good thing.
 
-#### Be mindful of what and how you format before persisting!
+### Be mindful of what and how you format before persisting!
 
 Lastly, please be mindful that this article was focused on the _format_ in
 which data is stored. I hope to discuss concerns such security for data at rest
