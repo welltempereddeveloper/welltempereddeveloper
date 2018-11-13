@@ -29,14 +29,11 @@
       {{ content }}
 
       <footer class="site-footer">
-        <ul>
           {% for post in site.posts %}
-            <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
-              {% if post.excerpt %}
-                {{ post.excerpt }}
-              {% endif %}
-            </li>
+            <span class="site-footer-owner"><a href="{{ post.url }}">{{ post.title }}</a></span>
+            {% if post.excerpt %}
+              <span class="site-footer-credits">{{ post.excerpt }}</span>
+            {% endif %}
           {% endfor %}
         </ul>
       </footer>
