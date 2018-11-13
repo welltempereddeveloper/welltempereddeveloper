@@ -1,0 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header .project-name a {
+  color: $section-headings-color;
+}
