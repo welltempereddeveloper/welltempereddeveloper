@@ -26,16 +26,17 @@
     </header>
 
     <main id="content" class="main-content" role="main">
-      {{ content }}
+      <p>
+        Thanks for reading! Hope you find something you like.
+      </p>
 
       <footer class="site-footer">
-          {% for post in site.posts %}
-            <span class="site-footer-owner"><a href="{{ post.url }}">{{ post.title }}</a></span>
-            {% if post.excerpt %}
-              <span class="site-footer-credits">{{ post.excerpt }}</span>
-            {% endif %}
-          {% endfor %}
-        </ul>
+        {% for post in site.posts %}
+          <span class="site-footer-owner"><a href="{{ post.url }}">{{ post.title }}</a></span>
+          {% if post.excerpt %}
+            <span class="site-footer-credits">{{ post.excerpt }}</span>
+          {% endif %}
+        {% endfor %}
       </footer>
     </main>
   </body>
