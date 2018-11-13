@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Double Check Your Work: git diff --staged"
-date:   2018-11-13
+date:   2018-11-14
 categories: scm quality
 ---
 
