@@ -39,8 +39,8 @@ Since that is essentially what we use to authenticate, a few developers will be
 tempted to store (wherever it is to be stored) that exact string
 (`ham9objpwYXNzd29yZA==`) as the "password". Why? Because if it's stored like
 that, then upon retrieval it is plump and ready to be dropped directly into the
-HTTP header, without any work, and communication with the REST-ful API is
-possible.
+HTTP header, without any work, and authorized communication with the REST-ful
+API is possible.
 
 ### But what about the FTP integration?
 
@@ -70,7 +70,7 @@ that uses the REST-ful API).
 Protocols and other application-specific details should not leak into the
 storage of the data.
 
-## But wait! It gets worse.
+### But wait! It gets worse.
 
 Things get further complicated when it comes time to rotate the password.
 Someone without much context on where or how this gets used (or even, the
@@ -85,9 +85,9 @@ Such a setup leaves _very_ little room for error, and that's a good thing.
 ### Is it secure to store passwords in plain text?
 
 Please remember that the focus of this article was on the (lack of) formatting
-in data-storage. I hope to discuss concerns such security for data at rest or
-in transit in a separate article. There is, without a doubt, _much_ to cover on
-that front.
+in data-storage. I hope to discuss concerns such as storing sensitive data at
+rest or in transit in a separate article. There is, without a doubt, _much_ to
+cover on that front.
 
 Everthing I mentioned here is pretty closely related to the [Principle of Least
 Astonishment][pola]. Give that a read if you've never heard of it or just need
