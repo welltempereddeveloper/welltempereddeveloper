@@ -8,11 +8,13 @@ You may have heard of [YAGNI][yagni]. People have written about it
 [over][yagni-1], and [over][yagni-2], and [over][yagni-3], and [over][yagni-4],
 and [over][yagni-5] again.
 
-I'm not here to repeat what that's about. I'm just here to say, seriously, you
-aren't gonna need it. Features, optimizations, parallelization, overloaded
-functions, "just-in-case" branches in code, optional parameters, libraries that
-do this and that, scripts that handle all theoretically-possible
-scenarios...just stop. You really, really ain't gonna need it.
+I'm not here to repeat what that's about. I'm just here to say, "Seriously, you
+aren't gonna need it."
+
+Features, optimizations, parallelization, overloaded functions, code branches,
+optional parameters, libraries that do this and that, scripts that handle all
+theoretically-possible scenarios...just stop.  You really, really ain't gonna
+need it.
 
 You wanna know what you _are_ gonna need that you probably should be working on
 instead? Take a look at your backlog. _Those_ are the things that you're gonna
