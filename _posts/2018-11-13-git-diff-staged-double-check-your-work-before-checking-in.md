@@ -14,32 +14,33 @@ source control.
 
 An often overlooked and under-utilized feature of git is `git diff --staged`.
 That is the "double-check your work" of source control. It essentially provides
-a diff of, well, that which is staged and about to be committed. It's the "let
-me make sure I'm committing what I _think_ I'm committing". You should
-carefully review that diff and make sure that nothing is missing and, more
-importantly, everything that's in there actually _needs_ to be there. If
-something is off, then fix it before you commit. Simple.
+a diff of, well, that which is staged and about to be committed. It's a "let
+me make sure I'm committing what I _think_ I'm committing".
+
+After running `git diff --staged`, you should carefully review that diff and
+make sure that nothing is missing and, more importantly, contains only that
+which _needs_ to be there.  If something is off, then fix it before you commit.
+Simple.
 
 The primary use case for `git diff --staged` is preventing problems that fall
 under the category of "Oh, how did that get in here?" It makes us a little more
 diligent with the things we commit.
 
 Often times, I'll see devs run an innocuous `git commit -a` and immediately
-follow that up with a `git push`. That's fine if you're working on your weekend
-throw-away project or in a scrap repository testing something out.  But if
-you're developing professional software, `git commit -a` is _not_ something you
-should be reaching for.
+follow that up with a `git push`. That's fine for weekend throw-away projects
+or in scrap repositories for testing some things out.  But when developing
+professional software, `git commit -a` should be seldomly used, if ever.
 
-`git diff --staged`. Try it out, start using it, and make it a habit.
+`git diff --staged`. Try it out, start using it, make it a habit.
 
 Make it an alias, like `gds`. That's almost as easy to type as `fds`. In fact,
-if it'll help you use it more often, alias it to `fds`.
+go ahead and alias it to `fds` if that'll help you use it more.
 
-For best results, use immediately _after_ a `git add` and immediately _before_
-a `git commit`.
+For best results, `git diff --staged` should be used immediately _after_ a `git
+add` and just _before_ a `git commit`.
 
 
-Pro tip: don't want to add everything that's currently modified? Try a `git add
+Pro tip: don't want to stage everything that's currently modified? Try a `git add
 -p`. Likewise, want to remove a small thing that has already been staged? Try a
 `git checkout . -p`.
 
