@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "You Aren't Gonna Need It - Seriously"
 date:   2018-11-14
 categories: quality
