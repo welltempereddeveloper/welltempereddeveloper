@@ -1,7 +1,7 @@
 ---
 title:  "Simple Jenkins Execute Shell Scripts"
 date:   2018-11-16
-categories: "continuous integration" "continous deployment" jenkins
+categories: continuous-integration continous-deployment jenkins
 ---
 
 I know it's 2018, but I'm pretty sure there are Jenkins jobs out there that use
