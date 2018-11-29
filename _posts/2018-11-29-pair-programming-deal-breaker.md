@@ -31,26 +31,25 @@ monitor.
 Terrible.
 
 For starters, he's 5 feet away from the monitor. He's probably leaning forward
-just to get a glimpse at the monitor and attempt to read the 10-point font that
-Tom has configured on his editor.
+just to get a glimpse at the 10-point font that Tom has configured on his
+editor.
 
 He's also in a new physical area of the office, at a workstation where someone
 _else_ always sits and works. From this position, Jerry can't even fathom to
-get his hands on the keyboard.
+get his hands on the keyboard, let alone contribute to the session.
 
 ### That's not pairing and Jerry is not feeling welcome.
 
 If Tom is hosting the pairing session at his station, then Tom should make
-Jerry feel like at home. For starters, Tom should move over and make room for
-Jerry at the workstation. That's a must. No exceptions.
+Jerry feel at home. For starters, Tom should move over and make room for Jerry
+at the workstation. That's a must. No exceptions.
 
 Both of them should be able to comfortably see what's on the monitor. Ideally,
 they have two mirrored monitors. It's 2018 and monitors are not that expensive.
 Ditto with the keyboard.
 
 The machine should be _usable_ for both members. By that I mean basic
-functionality such as switching tabs, navigating windows, or typing into the
-editor should be available.
+functionality such as switching tabs or typing should not be burdening.
 
 If Tom has a super-custom plugin installed that helps him be a 10x developer
 but is disruptive to Jerry, then turn it off. At minimum, find an easy to
@@ -61,8 +60,8 @@ the shortcut to toggle between layouts.
 Comfort is essential. Obviously I'm not talking about recliners and foot
 massages, but if one person does not feel comfortable pairing, for any
 reason, then they will try it once, maybe twice or three times, and that'll be
-it.
+it. You'll never see those two individuals pairing with each other again.
 
-In order for pairing to be effective, people must feel as comfortable pairing
+In order for pairing to be effective, people must feel as good pairing
 as they do working alone. Make that happen. Be able to spot when it's _not_
 happening and fix it.
