@@ -15,7 +15,7 @@ inconvenient.  The data is there, but you actually have to do a _little extra_
 work to really get your hands on it.
 
 As an example, let's take a password to a third-party service. This third-party
-service isn't ideal–as often times is the case–and for most interactions with
+service isn't ideal–as oftentimes is the case–and for most interactions with
 that service a REST-ful API is available. For a few legacy, yet crucial
 features, an FTP service is available to which files can be uploaded for
 processing.
