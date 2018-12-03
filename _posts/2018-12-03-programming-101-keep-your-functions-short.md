@@ -6,9 +6,11 @@ categories:  quality
 
 It's becoming blatently obvious that this isn't being stressed enough, in
 schools nor in the workplace. A long function is very detrimental to progress in
-the long run. If there is one thing that all devs could do today that would
-drastically increase productivity in the long run, it would be to simply stop
-writing long functions.
+the long run.
+
+If there is one thing that all devs could do today that would drastically
+increase productivity and quality while simultaneously decreasing bugs and
+debugging time, it would be to simply stop writing long functions.
 
 I'm not even talking about going back and refactoring existing functions. I'm
 just talking about new functions that get introduced today and going forward.
@@ -34,9 +36,9 @@ to do something slightly more interesting. A chain of well-named functions,
 performing some task, is much easier to comprehend than a single function
 performing the same task.
 
-If a function has one, well, function, then that function can be reused easily
-(without copy+paste) in other places. When a function does two things, reuse
-gets harder.
+If a function has one _function_, then it can be reused easily (without
+copy+paste and change a few things here and there) elsewhere. When a
+function does two things, reuse gets harder.
 
 ### And also ...
 
@@ -44,9 +46,8 @@ Functions that do one thing can easily be removed when that one thing is no
 longer needed. This helps keep code bases cleaner and free of dead code. That,
 in turn, keeps them simpler and easier to maintain.
 
-Debugging is easier. Functions that are modular are easier to debug. It does
-one thing, it should be fairly easy to verify that it actually does do that one
-thing.
+Functions that are modular are easier to debug. It does one thing, it should be
+fairly easy to verify that it actually does do that one thing.
 
 ### It's harder to get sloppy
 
@@ -67,3 +68,4 @@ To close things off, I'm going to leave you with one of my favorite quotes from
 
 [unix-philosophy-1]: http://www.linfo.org/unix_philosophy.html
 [unix-philosophy-2]: https://en.wikipedia.org/wiki/Unix_philosophy
+[martin-fowler]: https://en.wikiquote.org/wiki/Martin_Fowler
