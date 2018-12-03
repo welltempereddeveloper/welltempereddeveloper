@@ -1,6 +1,6 @@
 ---
 title:  "Programming 101: Keep Your Functions Short"
-date:   2018-11-30
+date:   2018-12-03
 categories:  quality
 ---
 
