@@ -97,11 +97,11 @@ have a very, very bad day.
 The general flow of asynchronous reports is:
 
 1. Client makes an HTTP request for a report.
-1. Server accepts request during which.
-  1. It serializes the request onto a queue for later processing.
-  1. It creates a token of some sort, which will later identify the finished
-     report.
-  1. It response to the client with the generated token.
+1. Server accepts request during which:
+1.1 It serializes the request onto a queue for later processing.
+1.1 It creates a token of some sort, which will later identify the finished
+   report.
+1.1 It response to the client with the generated token.
 1. Some out-of-band mechanism, ideally outside of the webserver, begins
    generating the report.
 1. The client will request the report, providing the token from the initial
@@ -113,7 +113,7 @@ The general flow of asynchronous reports is:
 ### Drawbacks
 
 Let's start with drawbacks here because there is one main drawback that's
-obvious: complexity. Asynchronous reports are–without a doubt–more complex to
+obvious: complexity. Asynchronous reports are, without a doubt, more complex to
 implement.
 
 On top of that, they are a bit harder to consume. You may be doing yourself a
@@ -123,7 +123,7 @@ able to actually implement a proper consumer. You will be reporting to, nobody.
 ### Benefits
 
 In addition to avoiding all of the drawbacks mentioned for synchronous reports,
-asynchronous reports give you a lot of wiggle room to get creative.
+asynchronous reports give you a lot of wiggle room for many improvements.
 
 
 #### Cheap re-requests
@@ -154,8 +154,8 @@ completely and trying again, from scratch, on a subsequent request.
 
 #### Many open possibilities
 
-Lastly, asynchronous reporst open the door for many easy optimizations/features
-that can be implemented later, with much greater ease.
+Lastly, asynchronous reporst open the door for optimizations and features that
+can be implemented later, with much greater ease.
 
 A few of them include:
 
@@ -179,7 +179,7 @@ there are a few other things to consider when providing a reporting system.
 If the demand for reports is expected to be anything _but_ negligible, then it's
 probably a good idea to break up reporting entirely from other portions of your
 system (i.e. don't put reporting in your main web app). Give the reporting
-system it's own web servers to minimize contention for these resources. If
+system it's own servers to minimize contention for these resources. If
 possible, a separate set of database replicated servers is not a bad idea.
 
 A side-benefit to isolated resources will be visible if and when performance
@@ -196,8 +196,5 @@ resources.
 Knowing the users of your systems greatly helps you make better choices. As
 mentioned before, asynchronous reports are more than just "hit this endpoint".
 Be sure that the clients of your reporting service are capable of integrating
-with it, otherwise you will have a glorious reporting system that is used by,
-nobody.
-
-
-Happy Reporting!
+with it, otherwise you will have a glorious, shiiny reporting system that is
+just sitting, smiling, and waiting for users that will never come.
