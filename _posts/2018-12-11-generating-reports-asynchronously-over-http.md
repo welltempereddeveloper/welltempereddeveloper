@@ -25,13 +25,13 @@ _delivering_ the report.
 
 ### Benefits
 
-These are simple. When a client needs a report, they simply make an HTTP request
-to some endpoint with a few provided filters, options, etc. We have a web server
-that accepts the request, produces the report, and then sends it back in the
-body of the response to the client.
+These are simple. When a client needs a report, they make an HTTP request to
+some endpoint and potentially provide a few filters or options. A web server
+accepts the request, produces the report, and sends it back in the body of the
+response to the client.
 
-There is really not much to add there. Again, we're ignoring any details of
-actually _producing_ the report. There are very few things that can go wrong in
+Again, ignoring any details of actually _producing_ the report, there is really
+not much to add there. There are (relatively) few things that can go wrong in
 this scenario. The general flow is: accept request, create report, send report
 back. Done.
 
@@ -42,29 +42,30 @@ we need.
 
 ### Drawbacks
 
-The drawbacks of this approach really begin to manifest themselves during
-failure high load scenarios. When things go wrong in a synchronous reporting
-framework, that's when it starts to hurt.
+The drawbacks of this approach really begin to manifest themselves when we
+begin experiencing failures, especially during periods of high load. When
+things start to go sideways in a synchronous reporting framework, that's when
+it starts to hurt.
 
-Before I go into a few, it's worth noting that while some of these can be
-engineered around with a synchronous framework, it's much easier to do so (or
-comes for free) with an asynchronous framework.
+It's worth noting that although we can certainly engineer around these issues
+with a synchronous framework, it's much easier to do so with an asynchronous
+framework. Some of these aren't even a problem in an asynchronous framework.
 
 #### Retries due to failure
 
 Things can and will go wrong. When generating gigantic, resource-intensive
-reports, things will fail right at the very end. And, if we've got a basic
-synchronous framework in place, then the only thing the client can do is to
-retry the request again. That means doing all of that resource-intensive work
-all over again (with no guarantees that it will pass the second, or third time
-around).
+reports, things will fail right at the very end. And, if we have a synchronous
+framework in place, then the only thing the client can do is to retry the
+request again. What that entails on our end is doing all of that
+resource-intensive work all over again (with no guarantees that it will pass
+the second, or third time around).
 
 #### Tied-up server threads
 
 When reports are synchronous, we will end up with connections from clients that
 are simply waiting for reports to be generated. This will eat up server threads
-that are blocked, doing nothing, waiting for a report to be generated. Instead, they
-_could_ instead be servicing other requests, but they're not.
+that are blocked doing nothing. They _could_ be serving other requests, but
+instead they are twiddling their thumbs waiting for some report to be generated.
 
 Ideally, connections to the web server are utilized as much as possible. A quick
 request-response turn-around time is desireable, as it mitigates the potential
@@ -73,25 +74,23 @@ for network partitions and other "gotchas".
 #### High chance-of-failure for time-consuming reports
 
 This is really a culmination of the previous two points. It will be practically
-impossible for a synchronous reporting framework to support reports that need a
-significant amount of time to generate. A network or system failure somewhere is
-simply way too likely to occur at this point. Something will go boom, and
-clients will need to retry, over, and over again.
+impossible for a synchronous reporting framework to reliably service
+time-consuming reports. A network or system failure somewhere is imminent.
+Something will go boom, and clients will need to retry, over, and over again.
 
-At this point, we will be _forced_ to implement something smart on the reporting
-end to allow for "retries" without actually retrying from the beginning. At this
-point, we may as well just make the reporting asynchronous.
+At this point, we will be _forced_ to implement something smart on the
+reporting end to allow for "retries" without actually retrying from the
+beginning. We will likely be looking at asynchronous solutions.
 
 
-#### Retries because of a refresh
+#### Retries due to page refresh
 
-Clients can get impatient. If it's a human requesting a report, and things are
+Clients can get impatient. If it is a human requesting a report, and things are
 taking slightly longer than usual, we will end up generating the same exact
 report multiple times. These repeated requests will up even more resources. If
-things are going slow, the client will request the report many, many times. This
-causes an avalanche of bad things to happen and the entire system will have a
-very bad day.
-
+things are still going slow, then clients will request the report many, many
+times over. This will trigger an avalanche of chaos and our entire system will
+have a very, very bad day.
 
 ## Asynchronous Reports
 
