@@ -4,7 +4,7 @@ date:   2019-01-03
 categories:  quality
 ---
 
-If we're [keeping our functions short] ({% post_url 2018-12-03-programming-101-keep-your-functions-short.md %}),
+If we're [keeping our functions short]({% post_url 2018-12-03-programming-101-keep-your-functions-short %}),
 then we're probably not running into functions with ["too
 many parameters"](too-many-parameters).
 
