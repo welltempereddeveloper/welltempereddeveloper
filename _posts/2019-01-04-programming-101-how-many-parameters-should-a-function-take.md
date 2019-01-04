@@ -5,8 +5,8 @@ categories:  quality
 ---
 
 If we're [keeping our functions short]({% post_url 2018-12-03-programming-101-keep-your-functions-short %}),
-then we're probably not running into functions with ["too
-many parameters"](too-many-parameters).
+then we're probably not running into functions with [too many
+parameters][too-many-parameters].
 
 Why?
 
@@ -16,10 +16,9 @@ for it to take, say, 10 parameters.
 
 ### So how many parameters _should_ a function take?
 
-"As many as it needs" is really the right answer, _but_ with the caveat that the
-function is doing one thing and one thing only. If that's the case, we should
-never end up with monster functions that need to be fed 20 parameters to do
-their thing.
+As many as it needs, _but_ with the caveat that the function is really doing
+one thing and one thing only. If that's the case, we should never end up with
+monster functions that need to be fed 20 parameters to do their thing.
 
 Now, if we come across the need, here and there, to take 5 parameters, then it's
 not the end of the world. It's ok, really. _But_, if we're constantly doing
@@ -50,18 +49,19 @@ parameters. Although not all that common in every day coding, the need for this
 does come up.
 
 For this specific use case, would could use the [Parameter Object
-pattern](parameter-object). It removes the need to set a slew of arguments when
-calling a function, in favor of setting fields (or keys) on one specific
+pattern][parameter-object]. It replaces the need to pass a slew of arguments when
+calling a function in favor of setting fields (or keys) on one specific
 "configuration" object. That single object then gets passed into the relevant
-method.
+function.
 
 The result? Clean(er) code.
 
 
-### Other suggestions?
+### Alternate options?
 
 Yes. Depending on your situation, you may want to look at the [Factory Method
-pattern](factory-method) or [Provider model pattern](provider-model) instead.
+pattern][factory-method] or [Provider model pattern][provider-model] instead.
+In some use cases, these patterns are more appropriate than Parameter Object.
 
 
 [too-many-parameters]: http://wiki.c2.com/?TooManyParameters
