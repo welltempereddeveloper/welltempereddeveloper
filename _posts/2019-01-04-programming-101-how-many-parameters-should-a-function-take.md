@@ -1,6 +1,6 @@
 ---
 title:  "Programming 101: How Many Parameters Should a Function Take?"
-date:   2019-01-03
+date:   2019-01-04
 categories:  quality
 ---
 
