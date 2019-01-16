@@ -1,6 +1,6 @@
 ---
 title:  "Metric-Driven Refactoring of Legacy Code"
-date:   2019-01-15
+date:   2019-01-16
 categories: refactoring
 ---
 
@@ -95,7 +95,6 @@ If you haven't actually done any work, other than the refactoring, then you'll
 probably need a day or two to actually finish your task. That may be enough to
 collect good data.
 
-
 Other applications may actually need a week or two. If you have traffic that
 greatly fluctuates (i.e. high peeks only on the weekends), then you may have to
 wait until the weekend to get data that you need to make a good decision with
@@ -108,8 +107,20 @@ fluctuate, but upon deploying them you discover that they're actually pretty
 stable. Perhaps you're collecting the wrong metrics? Perhaps you're
 misunderstanding how the application you're dealing with actually works?
 
-Figure these things out. it's important to know the "why's" here. If you've
-already went through the effort of collecting metrics, but you're collecting the
-_wrong_ metrics, then you're actually worse off then you were before. Best case
-scenario, you have useless metrics. Worst case scenario, you have _misleading_
-metrics, which can lead to bad decisions, which case lead to lots of headaches.
+Take time to understand these things. It is important to answer all of the
+"why's".  If you go through the effort of collecting metrics, but end up
+collecting the _wrong_ metrics, then you're actually worse off then you were
+before. Best case scenario, you have spent time collecting useless metrics.
+Worst case scenario, you have _misleading_ metrics, which can lead to bad
+decisions, which case lead to ... bad things.
+
+### What's next?
+
+Refactor away. As with everything, take small steps here. Don't drop the app on
+the butcher block. Be deliberate about how much change in between releasing.
+
+Always monitor the metrics you're collecting for any changes that could be
+indicative of a problem (i.e. lower throughput, longer processing times).
+Ideally, you have alerts set up for when key metrics cross some thresholds.
+Hopefuly, these will give you an extra level of confidence on your current and
+future refactoring endeavors.
